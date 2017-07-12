@@ -1,0 +1,438 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+	font-family: 'SmartFont';
+	src: url('../font/03SmartFontUI.woff') format('woff');
+}
+/*ここからindex.html*/
+
+body{
+    text-align: center;
+    font-family: 'SmartFont';    
+     
+}
+
+.all{
+    margin-top: 100px; 
+}
+
+.button {
+
+  background:#fff;
+  padding: 10px;
+  display: inline-block;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  border-radius: 20px;
+}
+.button::before,
+.button::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.button,
+.button::before,
+.button::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.camera {
+  padding-top: 20px;
+  background: #40AAEF;
+  border: 5px solid #40AAEF;
+  color: #fff;
+}
+
+.camera:hover {
+  background-color: #fff;
+  border-color: #40AAEF;
+  color: #40AAEF;
+  transition: 0.7s;
+}
+
+.library {   
+  padding-top: 20px;    
+  background: #FBA848;
+  border: 5px solid #FBA848;
+  color: #fff;
+}
+
+.library:hover {
+  background-color: #fff;
+  border-color: #FBA848;
+  color: #FBA848;
+  transition: 0.7s;    
+}
+
+.button p{ 
+    font-family: 'SmartFont';       
+    font-size: 50px;
+    padding: 12%;
+}
+
+.fa-file-image-o{
+    font-size: 1000%;
+}
+
+.fa-camera{
+    font-size: 1000%;
+}
+
+/*タブレット用*/
+@media screen and (max-width: 1000px) {
+    .all{
+        margin-top: 50px; 
+    }        
+    .button {
+          margin-top: 10px; 
+          background:#fff;
+          padding: 10px;
+          display: inline-block;
+          width: 80%;
+          height: 300px;
+          text-align: center;
+          text-decoration: none;
+          line-height: 54px;
+          outline: none;
+          border-radius: 20px;
+    }    
+    .camera {   
+      background: #40AAEF;
+    }    
+    .library {   
+      background: #FBA848;
+    }
+    .fa-camera{
+        padding-top:2%;
+        font-size: 120px;
+    }
+    .fa-file-image-o{  
+        padding-top:2%;        
+        font-size: 120px;
+    }   
+    .button p{ 
+        font-family: 'SmartFont';       
+        font-size: 40px;
+        display: block;
+        height: 0px;
+        padding-top: 20px;        
+    }       
+}
+@media screen and (max-width: 900px) {
+
+    .fa-camera{
+        padding-top:3%;
+        font-size: 120px;
+    }
+    .fa-file-image-o{  
+        padding-top:3%;        
+        font-size: 120px;
+    }     
+}
+
+
+/*タブレット用*/
+@media screen and (max-width: 800px) {
+
+    .fa-camera{
+        padding-top:4%;
+        font-size: 120px;
+    }
+    .fa-file-image-o{  
+        padding-top:4%;        
+        font-size: 120px;
+    }     
+}
+
+@media screen and (max-width: 700px) {
+
+    .fa-camera{
+        padding-top:5%;
+        font-size: 120px;
+    }
+    .fa-file-image-o{  
+        padding-top:5%;        
+        font-size: 120px;
+    }     
+}
+
+@media screen and (max-width: 600px) {
+
+    .fa-camera{
+        padding-top:7%;
+        font-size: 120px;
+    }
+    .fa-file-image-o{  
+        padding-top:7%;        
+        font-size: 120px;
+    }     
+}
+
+@media screen and (max-width: 500px) {
+
+    .fa-camera{
+        padding-top:8%;
+        font-size: 120px;
+    }
+    .fa-file-image-o{  
+        padding-top:8%;        
+        font-size: 120px;
+    }     
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .fa-camera{
+        padding-top:14%;
+        font-size: 120px;
+    }
+    .fa-file-image-o{  
+        padding-top:14%;        
+        font-size: 120px;
+    }    
+    .button p{ 
+        font-family: 'SmartFont';       
+        font-size: 35px;
+        display: block;
+        height: 0px;
+        padding-top: 20px;        
+    } 
+    
+}
+
+
+/*ここからresult.html*/
+.buhin_img{
+    margin: 0 auto;
+    width: 50%;
+}
+
+.result  h1{
+    margin-top: 5%;
+    font-family: 'SmartFont';
+    color: grey;
+    line-height: 60px;   
+    font-size: 30px;
+}
+
+.result span{
+    font-size: 50px;
+    background: #FBA848;    
+    color: white;
+    text-decoration-line: none;
+}
+
+.retry button{
+    background-color:aqua;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button-retry {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.button-retry,
+.button-retry::before,
+.button-retry::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.button-retry {
+  position: absolute;
+  z-index: 2;
+  background-color: #40AAEF;
+  border: 2px solid #40AAEF;
+  color: #fff;
+  line-height: 50px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.button-retry:hover {
+  color: #40AAEF; 
+  background: #fff;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);       
+}
+
+.retry .fa-refresh{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 230%;  
+    
+}
+
+@media screen and (max-width: 800px) {
+    .buhin_img{
+        margin-top: 20px;
+        width: 60%;
+    }    
+    .result  h1{
+        margin-top: 5%;
+        font-family: 'SmartFont';
+        color: grey;
+        line-height: 60px;   
+        font-size: 20px;
+    }
+    .result span{
+        font-size: 40px;
+    }    
+}
+
+
+@media screen and (max-width: 500px) {
+    .buhin_img{
+        margin-top: 20px;
+        width: 80%;
+    }    
+    .result  h1{
+        margin-top: 5%;
+        font-family: 'SmartFont';
+        color: grey;
+        line-height: 60px;   
+        font-size: 20px;
+    }
+    .result span{
+        font-size: 40px;
+    }    
+}
+
+.circle{
+    position: inline-block;
+    color: #40AAEF;
+}
+
+.circle .r{
+  -webkit-transform: rotate(330deg);
+          transform: rotate(330deg);      
+  position: absolute;
+  bottom: 80px;
+  right: 70px;
+}
+.circle .e{
+  -webkit-transform: rotate(345deg);
+          transform: rotate(345deg); 
+  position: absolute;    
+  bottom: 85px;
+  right: 58px;    
+}
+.circle .t{
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);   
+  position: absolute;      
+  bottom: 87px;
+  right: 48px;      
+}
+.circle .r2{
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);    
+  position: absolute;       
+  bottom: 86px;
+  right: 36.5px;     
+}
+.circle .y{
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);   
+  position: absolute;       
+  bottom: 81px;
+  right: 23px;       
+}
+
+.check-btn{
+    width: 60px; 
+    height: 60px;
+    border-radius: 30px;
+    vertical-align: middle;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.3);    
+}
+
+.check-btn:hover{
+    width: 60px; 
+    height: 60px;
+    border-radius: 30px;
+    vertical-align: middle;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.3);    
+}
+
+
+.true{
+    background-color: #58BE89;
+    border: #58BE89;    
+    position: absolute;
+    right: 180px;
+    bottom: 20px;    
+    color: white; 
+}
+
+.fa-circle-o{
+    padding-top: 13px;
+}
+.fa-times{
+    padding-top: 13px;
+}
+
+.false{
+    background-color: #F58E7E;
+    border-color: #F58E7E;
+    position: absolute;
+    right: 115px;
+    bottom: 20px;
+    color: white;
+}
+
+
+/*camera.html*/
+.submit{
+    display: block;
+    margin:0 auto;
+    width: 300px;
+    height: 60px;
+    background-color: #FBA848;
+    color: white;
+    border-radius: 20px;
+    margin-top: 400px;
+    border: #FBA848;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.3);     
+}
+
+.submit:hover{
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.3);   
+}
+.submit i{
+    padding-top: 13px;
+}
+
+.submit i span{
+    padding-top: 10px;
+	font-family: 'SmartFont';    
+    font-size: 30px;    
+}
