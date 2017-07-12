@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">    
+    <meta charset="UTF-8">
     <title>部品チェッカー</title>
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />    
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/lightbox.css">
-    <script src="./js/jquery-3.2.1.min.js"></script>    
+    <script src="./js/jquery-3.2.1.min.js"></script>
+
     <link rel="stylesheet" href="./css/main.css">
 </head>
-
 <body>
+  <button onclick="startVideo()">Start</button><br>
+    <video id="local_video" autoplay style="width: 750px; height: 1334px; border: 1px solid black;"></video>
+    <canvas id="canvas" width="750" height="1334"></canvas>
     <a class="submit" href="./result.html">
     <span>
-
-        <i class="fa fa-paper-plane-o fa-2x" aria-hidden="true"><span> 提出</span>
+        <i id="submit" class="fa fa-paper-plane-o fa-2x" aria-hidden="true"><span>提出</span>
         </i>
     </span>
-    </a>    
+    </a>
 </body>
+<script type="text/javascript">
+let localVideo = document.getElementById('local_video');
+let localStream;
+
+var camera;
+var cancas;
+// start local video
+function startVideo() {
+navigator.mediaDevices.getUserMedia({video: true, audio: false})
+.then(function (stream) { // success
+  localStream = stream;
+  localVideo.src = window.URL.createObjectURL(localStream);
+}).catch(function (error) { // error
+  console.error('mediaDevice.getUserMedia() error:', error);
+  return;
+});
+}
+
+$("#submit").on( "click", function(){
+  var jpeg = canvas.toDataURL("image/jpeg")	// JPEG
+  var download = $("<a></a>").appendTo("body").css("display","none");
+  download.prop({"href" : jpeg, "download": "canvas.jpg" });
+  download.get(0).click();
+  download.remove();
+  });
+
+</script>
 </html>
