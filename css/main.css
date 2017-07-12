@@ -8,13 +8,9 @@
 	src: url('../font/03SmartFontUI.woff') format('woff');
 }
 /*ここからindex.html*/
-html{
-    height: 100%;
-}
 body{
     text-align: center;
-    font-family: 'SmartFont';    
-    height: 100%;     
+    font-family: 'SmartFont';       
 }
 
 .all{
@@ -157,9 +153,6 @@ body{
         padding-top:4%;        
         font-size: 120px;
     }      
-    .button{
-       height: 50%;	    
-    }
 }
 
 @media screen and (max-width: 700px) {
